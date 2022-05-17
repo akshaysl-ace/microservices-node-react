@@ -1,0 +1,2 @@
+Project Name - Ticketing App.
+Used Tech stack - React, Node, Docker, Kubernetes, MongoDB, Skaffold, Redis, Next.js.

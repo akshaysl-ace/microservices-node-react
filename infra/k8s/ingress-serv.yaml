@@ -17,3 +17,4 @@ spec:
                 name: auth-serv
                 port:
                   number: 3000
+                  

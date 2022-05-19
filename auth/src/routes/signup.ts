@@ -12,9 +12,6 @@ router.post('/api/users/signup', [
     body('password').trim().isLength({ min: 4, max: 20 }).withMessage("Password must be between 4 to 20 characters.")
 ],
     async (req: Request, res: Response) => {
-        if (req){
-            console.log("req found");
-        }
 
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -34,7 +31,7 @@ router.post('/api/users/signup', [
         const userJwt = jwt.sign({
             id : user.id,
             email: user.email
-        },'jsonwebtoken');
+        }, process.env.JWT_KEY!);                                  // Tell typeScript we have done this ! check already.
 
         // store it to session cookie object
         req.session = {

@@ -34,6 +34,10 @@ app.use(errorHandler);
 
 // Create a start function to start server with DB connection
 const start = async () => {
+  if (!process.env.JWT_KEY) {
+    throw new Error('No secret found !');
+  }
+  
   try {
     await mongoose.connect('mongodb://auth-mongo-serv:27017/auth');
     console.log("Connected to Database for auth service...");

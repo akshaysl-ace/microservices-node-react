@@ -1,2 +1,2 @@
 # microservices-node-react
-# Project by - Akshay SL (akshaysl-ace)
+# A full stack (MERN) web application with technology stack such as Docker, Kubernetes, Next.js with TypeScript deployed on Google Cloud Platform.

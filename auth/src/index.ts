@@ -9,13 +9,13 @@ const start = async () => {
   
   try {
     await mongoose.connect('mongodb://auth-mongo-serv:27017/auth');
-    console.log("Connected to Database for auth service...");
+    console.log("Connected to Auth-DB..");
   } catch (err) {
     console.log(err);
   }
 
   app.listen(3000, () => {
-    console.log("Auth Service Listening on port 3000..");
+    console.log("Auth service started successfully..");
   });
 };
 

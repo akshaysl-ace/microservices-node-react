@@ -10,7 +10,7 @@ const router = express.Router();
 router.post(
   '/api/users/signin',
   [
-    body('email').isEmail().withMessage(''),
+    body('email').isEmail().withMessage('Username / Password is not valid !'),
     body('password')
       .trim()
       .notEmpty()
